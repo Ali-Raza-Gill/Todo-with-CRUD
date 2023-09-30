@@ -4,6 +4,7 @@ import SignIn from './SignIn/SignIn'
 import SignUp from './SignUp/SignUp'
 import ForgotPassword from './ForgotPassword/ForgotPassword'
 import Navbar from '../../Components/Navbar/Navbar'
+import Footer from '../../Components/Footer/Footer'
 export default function index() {
   return (
     <>
@@ -15,7 +16,7 @@ export default function index() {
           <Route path='forgotpassword' element={<ForgotPassword />} />
         </Routes>
       </main>
-      
+      <Footer/>
     </>
   )
 }
