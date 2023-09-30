@@ -2,6 +2,6 @@ import React from 'react'
 import Navbar from './Navbar'
 export default function index() {
   return (
-    <div><Navbar/></div>
+    <div><Navbar /></div>
   )
 }
