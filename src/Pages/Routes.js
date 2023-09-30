@@ -3,11 +3,13 @@ import { Route, Routes } from 'react-router-dom'
 import Frontend from './Frontend'
 import Auth from './Auth'
 export default function Index() {
-  return (
+  return (<>
     <Routes>
-        <Route path='/*' element={<Frontend/>}/>
-        <Route path='/auth/*' element={<Auth/>}/>
-        {/* <Route path='/dashboard' element={<DashBoard/>}/> */}
+      <Route path='/*' element={<Frontend />} />
+      <Route path='/auth/*' element={<Auth />} />
+      {/* <Route path='/dashboard' element={<DashBoard/>}/> */}
     </Routes>
+    
+  </>
   )
 }

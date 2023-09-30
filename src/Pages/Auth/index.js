@@ -7,12 +7,15 @@ import Navbar from '../../Components/Navbar/Navbar'
 export default function index() {
   return (
     <>
-    <Navbar/>
-    <Routes>
-        <Route path='sign-in' element={<SignIn/>}/>
-        <Route path='sign-up' element={<SignUp/>}/>
-        <Route path='forgotpassword' element={<ForgotPassword/>}/>
-    </Routes>
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path='sign-in' element={<SignIn />} />
+          <Route path='sign-up' element={<SignUp />} />
+          <Route path='forgotpassword' element={<ForgotPassword />} />
+        </Routes>
+      </main>
+      
     </>
   )
 }

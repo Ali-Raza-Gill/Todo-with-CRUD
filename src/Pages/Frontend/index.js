@@ -12,13 +12,15 @@ export default function index() {
     return (
         <>
             <Navbar />
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='todo' element={<Todo/>}/>
-                <Route path='contact' element={<Contact />} />
-                <Route path='about' element={<About />} />
-                <Route path='*' element={<Nopage/>}/>
-            </Routes>
+            <main>
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='todo' element={<Todo />} />
+                    <Route path='contact' element={<Contact />} />
+                    <Route path='about' element={<About />} />
+                    <Route path='*' element={<Nopage />} />
+                </Routes>
+            </main>
             <Footer />
         </>
     )

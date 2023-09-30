@@ -22,12 +22,12 @@ export default function Navbar() {
                     </ul>
                     <div className="row">
                         <div className="col">
-                            <Link to='auth/sign-up' className='btn ' style={{backgroundColor:"black",color:"white",borderRadius:"2px"}}>Sign Up</Link>
+                            <Link to='auth/sign-up' className='btn ' style={{ backgroundColor: "black", color: "white", borderRadius: "2px" }}>Sign Up</Link>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col mx-3">
-                            <Link to='auth/sign-in' className='btn ' style={{backgroundColor:"black",color:"white",borderRadius:"2px"}}>Sign In</Link>
+                            <Link to='auth/sign-in' className='btn ' style={{ backgroundColor: "black", color: "white", borderRadius: "2px" }}>Sign In</Link>
                         </div>
                     </div>
                 </div>
