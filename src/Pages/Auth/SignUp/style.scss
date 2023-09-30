@@ -1,0 +1,18 @@
+.bg{
+    background-image: url('../../../Assets/images/salmen-bejaoui-zywFsT-eJMY-unsplash.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    .container{
+        input::placeholder{color: white;}
+
+    }
+    .card{border-color: white;}
+    .btn{
+        border-radius: 30px;
+         padding: 10px;
+          width: 150px;
+          font-size: 18px;
+    }
+}
