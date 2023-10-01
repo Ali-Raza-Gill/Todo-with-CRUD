@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="col">
           <footer class="bg-light text-center text-lg-start">
             <div class="text-center p-3" style={{ backgroundColor: "rgba(0, 0, 0, 0.2);" }}>
-              © 2020 Copyright: Raza Developer's
+              © 2023 Copyright: Raza Developer's
             </div>
           </footer>
         </div>
