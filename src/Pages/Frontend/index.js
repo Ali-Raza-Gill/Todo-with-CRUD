@@ -7,11 +7,13 @@ import Navbar from '../../Components/Navbar/Navbar'
 import Footer from '../../Components/Footer/Footer'
 import Nopage from './Nopage'
 import Todo from './Todo/Todo'
+import Sidebar from '../../Components/Sidebar/Sidebar'
 
 export default function index() {
     return (
         <>
             <Navbar />
+            <Sidebar/>
             <main>
                 <Routes>
                     <Route path='/' element={<Home />} />

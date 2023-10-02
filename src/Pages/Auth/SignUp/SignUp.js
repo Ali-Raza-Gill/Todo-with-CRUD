@@ -5,7 +5,7 @@ import DriveFileRenameOutlineIcon from '@mui/icons-material/DriveFileRenameOutli
 import MarkEmailUnreadIcon from '@mui/icons-material/MarkEmailUnread';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import { Link } from 'react-router-dom';
-import '../SignUp/style.scss'
+import './style.scss'
 import {createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../../config/firebase';
 import { useState } from 'react';

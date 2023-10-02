@@ -19,6 +19,9 @@ export default function Navbar() {
                         <li class="nav-item">
                             <Link to={'about'} class="nav-link active" aria-current="page" href="#">About</Link>
                         </li>
+                        <li class="nav-item">
+                            <Link to={'sidebar'} class="nav-link active" aria-current="page" href="#">Sidebar</Link>
+                        </li>
                     </ul>
                     <div className="row">
                         <div className="col">

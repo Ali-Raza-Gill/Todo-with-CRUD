@@ -4,7 +4,7 @@ import ArrowForwardSharpIcon from '@mui/icons-material/ArrowForwardSharp';
 import MarkEmailUnreadIcon from '@mui/icons-material/MarkEmailUnread';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import { Link } from 'react-router-dom';
-import '../SignIn/style.scss'
+import './style.scss'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from 'react';
 const initialState = {
