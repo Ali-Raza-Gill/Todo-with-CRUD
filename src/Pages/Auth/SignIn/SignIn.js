@@ -5,22 +5,22 @@ import MarkEmailUnreadIcon from '@mui/icons-material/MarkEmailUnread';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import { Link } from 'react-router-dom';
 import '../SignIn/style.scss'
-// import { useState } from 'react';
-// const initialState={
-// email:"",
-// password:""
-// }
+import { useState } from 'react';
+const initialState={
+email:"",
+password:""
+}
 export default function SignIn() {
-  // const [state , setState] = useState(initialState)
+  const [state , setState] = useState(initialState)
 
-  // const handleChange=(e)=>{
-  //   setState(s=>({...s,[e.target.name]:e.target.value}))
-  // }
+  const handleChange=(e)=>{
+    setState(s=>({...s,[e.target.name]:e.target.value}))
+  }
 
-  // const handleSubmit=(e)=>{
-  //   e.preventDefault();
-  //   console.log(state);
-  // }
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    console.log(state);
+  }
 
 
 
