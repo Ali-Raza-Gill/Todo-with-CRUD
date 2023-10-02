@@ -5,21 +5,42 @@ import MarkEmailUnreadIcon from '@mui/icons-material/MarkEmailUnread';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import { Link } from 'react-router-dom';
 import '../SignIn/style.scss'
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from 'react';
-const initialState={
-email:"",
-password:""
+const initialState = {
+  email: "",
+  password: ""
 }
 export default function SignIn() {
-  const [state , setState] = useState(initialState)
+  const [state, setState] = useState(initialState)
+  const [isProcessing, SetIsProcessing] = useState(false)
 
-  const handleChange=(e)=>{
-    setState(s=>({...s,[e.target.name]:e.target.value}))
+  const handleChange = (e) => {
+    setState(s => ({ ...s, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit=(e)=>{
+  const handleSubmit = (e) => {
     e.preventDefault();
+    const { email, password } = state
     console.log(state);
+
+    SetIsProcessing(true)
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        console.log("user is sign in successfully");
+        console.log(user);
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      })
+      .finally(()=>{
+        SetIsProcessing(false)
+      });
   }
 
 
@@ -29,7 +50,7 @@ export default function SignIn() {
       <div className="row">
         <div className="col col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
           <div className="card p-3 p-md-2 p-lg-3 my-5 shadow-lg" style={{ background: "transparent" }}>
-            <form  onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
               <div className="row text-center">
                 <div className="col  mb-3 mt-3">
                   <AccountCircleIcon
@@ -71,7 +92,7 @@ export default function SignIn() {
                       <label class="form-check-label text-white" for="exampleCheck1">Remember</label>
                     </div>
                     <div>
-                      <Link to='contact' style={{textDecoration:"none",color:"white"}}>Forgot Password</Link>
+                      <Link to='contact' style={{ textDecoration: "none", color: "white" }}>Forgot Password</Link>
                     </div>
                   </div>
                 </div>

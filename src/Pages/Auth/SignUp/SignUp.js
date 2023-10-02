@@ -6,6 +6,8 @@ import MarkEmailUnreadIcon from '@mui/icons-material/MarkEmailUnread';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import { Link } from 'react-router-dom';
 import '../SignUp/style.scss'
+import {createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../../../config/firebase';
 import { useState } from 'react';
 const initialState = {
   firstName: "",
@@ -16,6 +18,7 @@ const initialState = {
 }
 export default function SignUp() {
   const [state, setState] = useState(initialState)
+  const [isprocessing, setIsProcessing] = useState(false)
 
   const handleChange = (e) => {
     setState(s => ({ ...s, [e.target.name]: e.target.value }))
@@ -23,6 +26,25 @@ export default function SignUp() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(state)
+    const {email,password}=state
+
+    setIsProcessing(true)
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed up 
+        const user = userCredential.user;
+        console.log(user);
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+      })
+      .finally(()=>{
+        setIsProcessing(false)
+      });
 
   }
 
@@ -33,7 +55,7 @@ export default function SignUp() {
       <div className="row">
         <div className="col col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
           <div className="card p-3 p-md-2 p-lg-3 my-5 shadow" style={{ background: "transparent" }}>
-            <form  onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
               <div className="row text-center">
                 <div className="col  mb-3 mt-3">
                   <AccountCircleIcon
@@ -82,7 +104,7 @@ export default function SignUp() {
               </div>
               <div className="row">
                 <div className="col offset-4 mb-3 mt-md-3 mt-lg-3 mt-sm-5">
-                  <button type='submit' className='btn btn-secondary' onSubmit={handleSubmit} style={{}}>Register</button>
+                  <button type='submit' className='btn btn-secondary' onSubmit={handleSubmit} >Register</button>
                 </div>
               </div>
               <div className="row">
