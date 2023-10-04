@@ -13,8 +13,7 @@ export default function index() {
                 <Sider trigger={null} collapsible collapsed={collapsed}>
                     <div className="demo-logo-vertical" />
                     <Menu
-                        theme="light" mode="inline" style={{backgroundColor:"red",color:"black"}} defaultSelectedKeys={['1']}
-
+                        theme="light" mode="inline" style={{backgroundColor:"red",color:"black"}} defaultSelectedKeys={['1']} items={items}
                     />
                 </Sider>
                 <Layout>
