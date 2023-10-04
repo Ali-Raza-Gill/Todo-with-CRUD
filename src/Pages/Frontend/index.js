@@ -18,11 +18,7 @@ export default function index() {
                 </Sider>
                 <Layout>
                     <Header
-                        style={{
-                            padding: 0,
-                            background: colorBgContainer,
-                        }}
-                    >
+                        style={{ padding: 0, background:'grey'}} className='d-flex align-items-center'>
                         <Button
                             type="text"
                             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
