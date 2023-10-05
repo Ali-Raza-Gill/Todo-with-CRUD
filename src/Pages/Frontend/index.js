@@ -13,12 +13,12 @@ export default function index() {
                 <Sider trigger={null} collapsible collapsed={collapsed}>
                     <div className="demo-logo-vertical" />
                     <Menu
-                        theme="light" mode="inline" style={{backgroundColor:"red",color:"black"}} defaultSelectedKeys={['1']} items={items}
+                        theme="light" mode="inline" style={{ backgroundColor: "red", color: "black" }} defaultSelectedKeys={['1']} items={items}
                     />
                 </Sider>
                 <Layout>
                     <Header
-                        style={{ padding: 0, background:'grey'}} className='d-flex align-items-center'>
+                        style={{ padding: 0, background: 'grey' }} className='d-flex align-items-center'>
                         <Button
                             type="text"
                             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
