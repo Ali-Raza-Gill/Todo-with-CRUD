@@ -1,12 +1,13 @@
-// import React, { useState,useContext } from 'react'
-// import { useNavigate } from 'react-router-dom';
+import React, { useState,useContext } from 'react'
+
+import { useNavigate } from 'react-router-dom';
 export default function index() {
-    // const [collapsed, setCollapsed] = useState(false);
-    // const { dispatch } = useContext(AuthContext);
-    // const navigate = useNavigate()
-    // const {
-    //   token: { colorBgContainer },
-    // } = theme.useToken();
+    const [collapsed, setCollapsed] = useState(false);
+    const { dispatch } = useContext(AuthContext);
+    const navigate = useNavigate()
+    const {
+      token: { colorBgContainer },
+    } = theme.useToken();
     return (
         <>
             <Layout >

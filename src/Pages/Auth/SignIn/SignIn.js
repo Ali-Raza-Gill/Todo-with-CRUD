@@ -45,7 +45,8 @@ export default function SignIn() {
 
 
 
-  return (<div className="bg" >
+  return (
+  <div className="bg" >
     <div className="container ">
       <div className="row">
         <div className="col col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
